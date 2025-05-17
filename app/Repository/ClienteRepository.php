@@ -16,6 +16,10 @@ class ClienteRepository
         return Cliente::where('email', $email)->first();
     }
 
+    public function buscarClienteFromId($id) {
+        return Cliente::find($id);
+    }
+
     public function criar($data) {
         return Cliente::create([
             'user_id' => $data['user_id'],

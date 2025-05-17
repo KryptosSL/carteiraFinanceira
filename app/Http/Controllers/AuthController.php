@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function __construct() {
-    
-    }
-
-
    public function showLoginForm()
     {
         if (auth()->check()) {
@@ -19,7 +14,6 @@ class AuthController extends Controller
 
         return view('Login');
     }
-
 
     public function login(Request $request)
     {
@@ -30,7 +24,6 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
             return redirect()->route('dashboard'); 
         }
 

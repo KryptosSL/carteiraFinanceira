@@ -7,6 +7,7 @@ use Illuminate\Auth\AuthenticationException;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use App\Exceptions\BusinessException;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -22,17 +23,9 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
-      /*  $exceptions->renderable(function (BusinessException $e, $request) {
+        $exceptions->renderable(function (BusinessException $e, $request) {
             return response()->json(["teste" => "1111"], 400);
         });
-
-        $exceptions->renderable(function (Throwable $e, $request) {
-            return response()->json([
-                "mensagem" => "Erro insperado.",
-                "sucesso" => false
-            ], 500);
-        });  */
-
     })
  
     ->create();

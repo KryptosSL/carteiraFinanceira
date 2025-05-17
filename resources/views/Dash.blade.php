@@ -6,6 +6,7 @@
   <title>Carteira Financial</title>
   <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
@@ -139,81 +140,7 @@
         @endforeach
 
 
-
-
-
-        <!--  <tr class="border-t">
-            <td class="px-6 py-4">17/05/2025</td>
-            <td class="px-6 py-4">Salário</td>
-            <td class="px-6 py-4 text-green-600 font-semibold">R$ 3500.00</td>
-            <td class="px-6 py-4">
-              <span class="text-green-700 bg-green-100 px-2 py-1 rounded-full text-sm">entrada</span>
-            </td>
-          </tr>
-          <tr class="border-t">
-            <td class="px-6 py-4">15/05/2025</td>
-            <td class="px-6 py-4">Aluguel</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 1200.00</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>
-          <tr class="border-t">
-            <td class="px-6 py-4">14/05/2025</td>
-            <td class="px-6 py-4">Supermercado</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 450.75</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>
-                    <tr class="border-t">
-            <td class="px-6 py-4">14/05/2025</td>
-            <td class="px-6 py-4">Supermercado</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 450.75</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>
-                    <tr class="border-t">
-            <td class="px-6 py-4">14/05/2025</td>
-            <td class="px-6 py-4">Supermercado</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 450.75</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>
-                    <tr class="border-t">
-            <td class="px-6 py-4">14/05/2025</td>
-            <td class="px-6 py-4">Supermercado</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 450.75</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>
-                    <tr class="border-t">
-            <td class="px-6 py-4">14/05/2025</td>
-            <td class="px-6 py-4">Supermercado</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 450.75</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>
-                    <tr class="border-t">
-            <td class="px-6 py-4">14/05/2025</td>
-            <td class="px-6 py-4">Supermercado</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 450.75</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>
-          <tr class="border-t">
-            <td class="px-6 py-4">14/05/2025</td>
-            <td class="px-6 py-4">Supermercado</td>
-            <td class="px-6 py-4 text-red-600 font-semibold">R$ 450.75</td>
-            <td class="px-6 py-4">
-              <span class="text-red-700 bg-red-100 px-2 py-1 rounded-full text-sm">saída</span>
-            </td>
-          </tr>-->
+ 
         </tbody>
       </table>
     </div>
@@ -241,8 +168,9 @@
         <div class="mb-4">
           <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Quantidade</label>
           <input
-            type="number"
-            id="nome"
+            type="text"
+     
+             id="quantidade_deposito"
             name="valor"
             min="0"
             class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -309,8 +237,8 @@
         <div class="mb-4">
           <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Quantidade</label>
           <input
-            type="number"
-            id="nome"
+            type="text"
+            id="quantidade_transferencia"
             name="valor"
             min="0"
             class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -362,8 +290,11 @@
         $('#modalOverlayDeposito').addClass('hidden');
       });
 
+      
        
     });
+
+   
   </script>
 
 </body>
