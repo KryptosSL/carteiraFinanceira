@@ -7,12 +7,9 @@ use App\Http\Controllers\CarteiraController;
 use App\Http\Controllers\ClienteController;
 
 
-Route::get('/pagina', function () {
-    return view('login');
-});
-
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
